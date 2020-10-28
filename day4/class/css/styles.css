@@ -6,24 +6,30 @@ body {
   .grid {
     display: grid;
     gap: 10px;
-    grid-template-columns: [first-line] 100px [second-line] 100px [thrid-line] 100px [fourth-line] 100px [fifth-line];
-    grid-template-rows: repeat(4, 100px [sexy-line]);
+    width: 500px;
+    height: 50vh;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); */
+    grid-template: 
+    [header-start] "header header header header" 1fr [header-end] 
+    [content-start] "content content content nav" 2fr [content-end] 
+    [footer-start] "footer footer footer footer" 1fr  [footer-end] / 1fr 1fr 1fr 1fr
+    ;
   }
   
   .header {
-    background-color: #2ecc71;
-    grid-column: 1/-1;    /* 1 ~ 5 (-1 : end) */
+    background-color: #2ecc71; 
+    grid-area: header;
   }
   .content {
-    background-color: #3498db;
-    grid-column: first-line/fourth-line;
-    grid-row: sexy-line 1 / sexy-line 3;  /* no first line on sexy-line */
+    background-color: #3498db;  
+    grid-area: content;
   }
   .nav {
-    background-color: #8e44ad;
-    grid-row: 2/4;
+    background-color: #8e44ad; 
+    grid-area: nav;
   }
   .footer {
-    background-color: #f39c12;
-    grid-column: span 4;  /* take 4 */
+    background-color: #f39c12; 
+    grid-area: footer;
   }
