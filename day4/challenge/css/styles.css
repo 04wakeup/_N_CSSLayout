@@ -1,0 +1,67 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .grid {
+    display: grid;
+    gap: 0px;
+    width: 80vh;
+    height: 50vh;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    /* align-items: stretch;
+    justify-items: center;  same as below */
+    place-items: stretch stretch;
+    grid-template:
+        "top1 top1 top2 top2" 1fr
+        "top1 top1 top2 top2" 1fr
+        "bot1 bot1 bot2_sm_1 bot2_sm_2" 1fr
+        "bot1 bot1 bot2_sm_3 bot2_sm_4" 1fr / 1fr 1fr 1fr 1fr; 
+  }
+
+.grid div{ 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  .font-3rem{
+    font-size: 3rem;
+  } 
+  .font-1rem{
+    font-size: 1rem;
+  } 
+  .color-red{
+      color: red;
+  }
+  .color-white{
+      color: white;
+  }
+  .top1{
+    background-color: #DAE7DE;
+    grid-area: top1;
+  }
+  .top2{
+    background-color: #008A69;
+    grid-area: top2;
+  }
+  .bot1{
+    background-color: #F44607;
+    grid-area: bot1;
+  }
+  .bot2_sm_1{
+      background-color: #F7ABC5;
+      grid-area: bot2_sm_1;
+  }
+  .bot2_sm_2{
+      background-color: #5F5FA9;
+      grid-area: bot2_sm_2;
+  }
+  .bot2_sm_3{
+      background-color: #FFC128;
+      grid-area: bot2_sm_3;
+  }
+  .bot2_sm_4{
+      background-color: #F97374;
+      grid-area: bot2_sm_4;
+  }
