@@ -1,11 +1,8 @@
-@import "_buttons";
+@import "_mixins";
 
 a {
-  @extend %button;
-  text-decoration: none;
-}
+  @include responsive{
+    text-decoration: none;
 
-button{
-  @extend %button;
-  border: none;
+  }
 }
