@@ -3,6 +3,7 @@
 .canvas{
     background-color: $black;
     width: 80%;
+    height: 150vh;
     padding: 10vh;
 }
 header {
@@ -32,9 +33,9 @@ header {
     display: grid;
     height: 70vh;
     grid-template: 
-    "item1 item2 item6 item7" 1fr
-    "item3 item4 item6 item7" 1fr 
-    "item3 item5 item6 item7" 1fr  / minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr)
+    "item1 item2 item6 item7" minmax(220px, 1fr)
+    "item3 item4 item6 item7" minmax(220px, 1fr) 
+    "item3 item5 item6 item7" minmax(220px, 1fr)  / minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr)
     ;
 }
 
