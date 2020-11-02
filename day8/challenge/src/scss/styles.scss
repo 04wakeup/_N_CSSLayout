@@ -1,0 +1,107 @@
+@import "_variables";
+
+.canvas{
+    background-color: $black;
+    width: 80%;
+    padding: 10vh;
+}
+header {
+    background-color: $gray; 
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__1{
+        margin-left: 1em;
+        .dot{
+            height: 1em;
+            width: 1em; 
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid $border_black;
+        }
+    }
+    .header__2{
+        width: 30%;
+        height: 1em;
+        border: 1px solid $border_black;
+    }
+}
+
+.grid{
+    display: grid;
+    height: 70vh;
+    grid-template: 
+    "item1 item2 item6 item7" 1fr
+    "item3 item4 item6 item7" 1fr 
+    "item3 item5 item6 item7" 1fr  / minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr)
+    ;
+}
+
+.item1{
+    background-color: $black;
+    grid-area: item1;
+    color: $white;
+    font-size: 1.8em;
+    padding: 0.5em;
+    display: flex;
+    li {
+        display: flex;  
+    }
+    span{
+        display: flex; 
+        // margin-top: 1em; 
+        margin-top: 0.2em;
+        margin-left: -0.13em;
+        margin-right: -0.18em;  
+        writing-mode: vertical-lr;
+        transform: rotate(90deg); 
+    }
+}
+.item2{
+    background-color: $purple;
+    grid-area: item2;
+}
+.item3{
+    background-color: $red;
+    grid-area: item3;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em;
+    line-height: 1.2em;
+}
+.item4{
+    background-color: $white;
+    grid-area: item4;
+}
+.item5{
+    background-color: $gold;
+    grid-area: item5;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+.item6{
+    background-color: $white;
+    grid-area: item6;
+    li:nth-child(6) span{
+        background-color: $purple;
+    }
+}
+.item7{
+    background-color: $white;
+    grid-area: item7;
+}
+.item6, .item7{
+    line-height: 1.4em;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.item6 h3, .item7 h3{
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+ 
