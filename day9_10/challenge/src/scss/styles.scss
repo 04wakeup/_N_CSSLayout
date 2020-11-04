@@ -39,8 +39,11 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        white-space: nowrap;
+        // white-space: nowrap;
         overflow: hidden;
+        span{
+            animation: scrollText 10s linear infinite forwards;
+        }
     }
     .center{ 
         grid-area: center;
@@ -83,6 +86,9 @@ body{
         // cut off the text overflowed
         white-space: nowrap;
         overflow: hidden;
+        span{
+            animation: scrollText 20s linear infinite backwards;
+        }
     }
     .nav1{
         background-color: #FD6B3A;
@@ -152,4 +158,16 @@ img{
     position: fixed;
     right: 16%;
     bottom: 10%;
+}
+
+@keyframes scrollText{
+    0%{
+        transform: translateX(-800px);
+    }
+    50%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(-800px);
+    }
 }
