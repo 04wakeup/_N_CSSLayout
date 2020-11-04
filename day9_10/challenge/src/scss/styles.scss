@@ -1,0 +1,155 @@
+@import "_titles";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@900&display=swap');
+
+body{ 
+    background-color: #EDEB55;
+    justify-content: center;
+}
+
+.grid{
+    display: grid;
+    width: 100%;
+    height: 90vh;
+    margin: 10px 0 0 10%; 
+    & > * {
+        border: 3px solid orange;
+    }
+    // grid-template-columns: 1px 100px 11px;
+    // grid-template-rows: 100px;
+    // row / col size below;
+    grid-template:  
+    "top top top" 0.6fr
+    "nav1 center nav4" 1fr 
+    "nav1 center nav4" 1fr
+    "nav1 center nav4" 1fr
+    "nav1 center nav4" 1fr 
+    "nav1 center nav4" 1fr
+    "nav1 center nav5" 1fr
+    "nav2 center nav5" 1fr
+    "nav2 center nav5" 1fr
+    "nav2 center nav5" 1fr
+    "nav3 center nav5" 1fr 
+    "bottom bottom bottom"  0.6fr / minmax(30px, 50px) minmax(1000px, 70%) minmax(30px, 50px)
+    ;
+    
+    .top{
+        background-color: #FFFFFF;
+        grid-area: top;
+        @extend %font1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .center{ 
+        grid-area: center;
+        display:flex;
+        background-image: linear-gradient(rgba(209, 184, 184, 0.1), rgba(231, 106, 106, 0.2)), url("../../images/pic1.PNG");
+        background-size:  cover;
+        
+        background-repeat: no-repeat;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white; 
+        font-size: 50px;
+        letter-spacing: 10px;
+        h1{
+            font-family: "Inconsolata";
+            margin-bottom: 20px;
+        }
+        h2{
+            font-family:  "Anton";
+        } 
+        div{
+            display: flex;
+            background-size:cover; 
+            background-position:center;
+            width: 50%; 
+            img{
+                width: 100%; 
+            }     
+        }
+    }
+    .bottom{
+        background-color: #FFFFFF;
+        grid-area: bottom;
+        @extend %font1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // cut off the text overflowed
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .nav1{
+        background-color: #FD6B3A;
+        grid-area: nav1;  
+        overflow-wrap: break-word; 
+        padding: 80% 50% 50% 30%;
+        line-height: 18px;
+        @extend %font2;  
+        div{
+            transform: rotate(-25deg);
+        }
+        .empty{
+            margin: 5px;
+        }
+    }
+    .nav2{
+        background-color: #FFFFFF;
+        grid-area: nav2;
+        @extend %font1; 
+        overflow-wrap: break-word; 
+        padding-top: 5px;
+        div{
+            transform: rotate(-90deg);
+        }
+        line-height: 10px;
+        .empty{
+            margin: 10px;
+        }
+    }
+    .nav3{
+        background-color: #FFFFFF;
+        grid-area: nav3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .nav4{
+        background-color: #46AA4F;
+        grid-area: nav4;
+        @extend %font2;
+        padding: 60% 50% 50% 30%;
+        overflow-wrap: break-word; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav5{
+        background-color: #46AA4F;
+        grid-area: nav5;
+        @extend %font2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 60% 50% 50% 30%;
+    }
+}
+ 
+img{
+    position: fixed;
+    right: 16%;
+    bottom: 10%;
+}
