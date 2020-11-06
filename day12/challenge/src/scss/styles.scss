@@ -44,14 +44,81 @@ body {
                 writing-mode:vertical-rl; 
                 color: red;
                 font-weight: 600;
+                font-size: 20px;
            } 
         }
         & >:nth-child(2) {
+            display: flex;  
+            align-items: center;
             margin: 0 -2px;  
-            font-size: 90px;
+            font-size: 35px;
             color: red;
+            padding: 10px;
         }
-
+        & >:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center; 
+            & >:nth-child(1){
+                @extend %left2;
+                font-size: 18px;
+                font-weight: 600;
+                color: red;
+                border-bottom: 2px solid #FF3100; 
+            }
+            & >:nth-child(2){ 
+                @extend %left2; 
+                .btn{
+                    background-color: red;
+                    text-decoration: none;
+                    color: orange; 
+                    padding: 10px 40px;
+                    font-weight: 500;
+                    border-radius: 99px;
+                    transition: background-color 0.2s linear;
+                    &:hover{
+                        background-color: yellow;
+                        color: blue;
+                    }
+                }
+            }
+        }
+    } 
+    & >:nth-child(3){
+        z-index: 1;
+        & > *  { 
+            border: 2px solid white; 
+        }
+        .left__middle__left{
+            span{
+                 color: white;
+            }
+        }
+        .left__middle__middle{ 
+                 color: white; 
+        }
+        & >:nth-child(3){
+            & >:nth-child(1){
+                 color: white;
+                 border-bottom: 2px solid white; 
+            }
+            & >:nth-child(2){   
+                .btn{
+                    background-color: white;
+                    text-decoration: none;
+                    color: orange; 
+                    padding: 10px 40px;
+                    font-weight: 500;
+                    border-radius: 99px;
+                    transition: background-color 0.2s linear;
+                    &:hover{
+                        background-color: yellow;
+                        color: blue;
+                    }
+                }
+            }
+        }
     }
 }
 .middle{
