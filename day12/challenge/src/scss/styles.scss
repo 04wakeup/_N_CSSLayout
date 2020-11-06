@@ -21,9 +21,10 @@ body {
     grid-template-rows: 1fr repeat(6, 5fr);
     padding: 0 15px 15px 15px;
     .left__top{ 
+        @extend %left;  
         & > * {
-            border: 2px solid #FF3100;
-            border-top: none;
+            border-left: 2px solid #FF3100;
+            border-right: 2px solid #FF3100; 
         }
         .left__top__2{
             margin: 0 -2px; 
