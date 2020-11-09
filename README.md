@@ -6,9 +6,9 @@ This repository is for storing the sources to practice CSS Layout without any CS
 ## Core Technology Stack
 
 * CSS3(SCSS)
-  ** Flexbox
-  ** Grid
-  ** SCSS using Gulp
+    * Flexbox
+    * Grid
+    * SCSS using Gulp
 
 ## List of Results
 
