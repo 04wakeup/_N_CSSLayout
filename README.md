@@ -1,4 +1,4 @@
-# ThinkFood
+# CSS Layout
 ## Overview
 
 This repository is for storing the sources to practice CSS Layout without any CSS framework.
